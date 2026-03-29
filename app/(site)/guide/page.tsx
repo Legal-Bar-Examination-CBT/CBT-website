@@ -321,7 +321,12 @@ export default function GuidePage() {
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild className="h-12 px-8 border-white/30 text-white hover:bg-white/10">
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              className="h-12 px-8 border-white/40 bg-transparent text-white shadow-none hover:bg-white/15 hover:text-white"
+            >
               <Link href="/faq">
                 よくある質問を見る
               </Link>
