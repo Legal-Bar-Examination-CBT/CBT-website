@@ -120,7 +120,7 @@ export function HeroSection() {
                   {/* Question Header */}
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
-                      令和6年 司法試験 憲法
+                      令和7年 司法試験 憲法
                     </span>
                     <span className="text-xs text-muted-foreground">制限時間: 02:00:00</span>
                   </div>

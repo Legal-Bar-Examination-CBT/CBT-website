@@ -16,7 +16,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { Field, FieldGroup, FieldLabel, FieldMessage } from "@/components/ui/field"
+import { Field, FieldGroup, FieldLabel, FieldDescription } from "@/components/ui/field"
 
 const contactMethods = [
   {
@@ -159,7 +159,7 @@ export default function ContactPage() {
                         placeholder="example@email.com" 
                         required 
                       />
-                      <FieldMessage>返信先として使用します</FieldMessage>
+                      <FieldDescription>返信先として使用します</FieldDescription>
                     </Field>
                     
                     <Field>

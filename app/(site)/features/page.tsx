@@ -16,6 +16,7 @@ import {
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { SubjectsSection } from "@/components/features/subjects-section"
 
 export const metadata: Metadata = {
   title: "機能紹介",
@@ -114,31 +115,36 @@ const aiFeatures = [
 export default function FeaturesPage() {
   return (
     <div className="pt-16">
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-28 overflow-hidden">
+      {/* ヒーロー＋対応科目を同一背景でコンパクトに */}
+      <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5 -z-10" />
         <div className="absolute top-1/4 right-1/4 h-64 w-64 rounded-full bg-primary/10 blur-3xl -z-10" />
-        
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
-            <Badge variant="secondary" className="mb-4">Features</Badge>
-            <h1 className="text-4xl font-bold text-foreground sm:text-5xl text-balance">
+
+        <div className="relative mx-auto max-w-7xl px-4 pb-0 pt-8 sm:px-6 sm:pt-10 lg:px-8 lg:pt-11">
+          <div className="mx-auto max-w-2xl px-2 text-center sm:px-0">
+            <Badge variant="secondary" className="mb-2 sm:mb-3">
+              Features
+            </Badge>
+            <h1 className="text-balance text-3xl font-bold text-foreground sm:text-4xl lg:text-[2.5rem] lg:leading-tight">
               合格に必要な機能を、
               <br />
               <span className="text-primary">すべてひとつに。</span>
             </h1>
-            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:mt-4 sm:text-base lg:text-[1.05rem]">
               論文式の添削から短答式の演習、AIによる学習分析まで。
+              <br className="hidden sm:inline" />
               司法試験合格に必要な機能をすべて搭載しています。
             </p>
           </div>
         </div>
+
+        <SubjectsSection compact />
       </section>
 
       {/* Features Tabs */}
-      <section className="py-16 lg:py-20">
+      <section className="border-t border-border/40 bg-background pb-14 pt-5 sm:pb-16 sm:pt-6 lg:pt-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Tabs defaultValue="ronbun" className="space-y-12">
+          <Tabs defaultValue="ronbun" className="space-y-8 sm:space-y-10 lg:space-y-12">
             <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-3 h-auto p-1">
               <TabsTrigger value="ronbun" className="py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
                 <PenLine className="h-4 w-4 mr-2" />
@@ -173,7 +179,7 @@ export default function FeaturesPage() {
                   {/* Editor Area */}
                   <div className="lg:col-span-2 p-6 border-r">
                     <div className="flex items-center justify-between mb-4">
-                      <Badge>令和5年 司法試験 憲法 第1問</Badge>
+                      <Badge>令和7年 司法試験 憲法 第1問</Badge>
                       <span className="text-sm text-muted-foreground">残り時間: 01:45:32</span>
                     </div>
                     <div className="bg-muted/30 rounded-lg p-4 min-h-[200px] border">
