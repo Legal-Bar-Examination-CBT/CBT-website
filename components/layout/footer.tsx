@@ -1,5 +1,7 @@
 import Link from "next/link"
-import { Scale, MapPin, Clock, Mail, ExternalLink } from "lucide-react"
+import Image from "next/image"
+import { MapPin, Clock, Mail, ExternalLink } from "lucide-react"
+import { SITE_NAME } from "@/lib/site-brand"
 import { Separator } from "@/components/ui/separator"
 
 const footerLinks = {
@@ -38,12 +40,17 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gold text-gold-foreground">
-                <Scale className="h-5 w-5" />
-              </div>
-              <span className="text-lg font-bold text-white">
-                司法試験<span className="text-gold">CBT</span>
+            <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group">
+              <Image
+                src="/logo.webp"
+                alt={SITE_NAME}
+                width={144}
+                height={144}
+                sizes="40px"
+                className="h-9 w-9 sm:h-10 sm:w-10 rounded-xl object-contain shadow-md ring-1 ring-white/10"
+              />
+              <span className="text-sm sm:text-lg font-bold text-white leading-tight max-w-[14rem] sm:max-w-none">
+                {SITE_NAME}
               </span>
             </Link>
             <p className="mt-4 max-w-xs text-sm text-white/70 leading-relaxed">
@@ -109,7 +116,7 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="text-sm text-white/60">
-            &copy; {new Date().getFullYear()} 司法試験CBT問題演習ビューワー. All rights reserved.
+            &copy; {new Date().getFullYear()} {SITE_NAME}. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link

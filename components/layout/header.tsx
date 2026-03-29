@@ -1,9 +1,10 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { useState, useEffect } from "react"
-import { Menu, Scale, ChevronDown } from "lucide-react"
+import { Menu, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   NavigationMenu,
@@ -16,6 +17,7 @@ import {
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
 import { headerFeatures, headerNavItems } from "@/lib/site-navigation"
+import { SITE_NAME } from "@/lib/site-brand"
 
 function navLinkClass(overlay: boolean) {
   const base =
@@ -60,18 +62,29 @@ export function Header() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground transition-transform group-hover:scale-105">
-              <Scale className="h-5 w-5" />
-            </div>
+          <Link
+            href="/"
+            className="flex items-center gap-2.5 sm:gap-3 group shrink-0 min-w-0"
+          >
+            <Image
+              src="/logo.webp"
+              alt={SITE_NAME}
+              width={144}
+              height={144}
+              sizes="40px"
+              className={cn(
+                "h-9 w-9 sm:h-10 sm:w-10 rounded-xl object-contain shadow-sm transition-transform group-hover:scale-[1.02]",
+                overlay && "ring-1 ring-white/25"
+              )}
+              priority
+            />
             <span
               className={cn(
-                "text-lg font-bold",
+                "max-w-[11rem] sm:max-w-[20rem] font-bold leading-tight tracking-tight text-[11px] sm:text-xs md:text-sm lg:text-base",
                 overlay ? "text-white" : "text-foreground"
               )}
             >
-              司法試験
-              <span className={overlay ? "text-gold" : "text-primary"}>CBT</span>
+              {SITE_NAME}
             </span>
           </Link>
 
