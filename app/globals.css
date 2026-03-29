@@ -28,9 +28,9 @@
   --muted: oklch(0.96 0.01 240);
   --muted-foreground: oklch(0.50 0.02 255);
   
-  /* Accent - Emerald Green */
-  --accent: oklch(0.65 0.17 160);
-  --accent-foreground: oklch(0.985 0 0);
+  /* Accent - ホバー・選択用の淡い紺（outline / ghost ボタン等） */
+  --accent: oklch(0.93 0.04 255);
+  --accent-foreground: oklch(0.35 0.12 255);
   
   /* Gold Accent */
   --gold: oklch(0.75 0.12 85);
@@ -47,7 +47,7 @@
   
   /* Charts */
   --chart-1: oklch(0.35 0.12 255);
-  --chart-2: oklch(0.65 0.17 160);
+  --chart-2: oklch(0.50 0.10 255);
   --chart-3: oklch(0.75 0.12 85);
   --chart-4: oklch(0.55 0.15 200);
   --chart-5: oklch(0.60 0.20 30);
@@ -84,8 +84,8 @@
   --muted: oklch(0.25 0.03 255);
   --muted-foreground: oklch(0.65 0.02 240);
   
-  --accent: oklch(0.65 0.17 160);
-  --accent-foreground: oklch(0.985 0 0);
+  --accent: oklch(0.28 0.05 255);
+  --accent-foreground: oklch(0.95 0.01 240);
   
   --gold: oklch(0.80 0.14 85);
   --gold-foreground: oklch(0.15 0.03 85);
@@ -98,7 +98,7 @@
   --ring: oklch(0.55 0.15 255);
   
   --chart-1: oklch(0.55 0.15 255);
-  --chart-2: oklch(0.65 0.17 160);
+  --chart-2: oklch(0.55 0.12 255);
   --chart-3: oklch(0.80 0.14 85);
   --chart-4: oklch(0.55 0.15 200);
   --chart-5: oklch(0.60 0.20 30);
@@ -198,7 +198,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent);
+  background: oklch(0.30 0.12 255);
 }
 
 /* Gold gradient text */
