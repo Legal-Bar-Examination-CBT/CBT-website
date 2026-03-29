@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   description: "司法試験対策、CBT活用術、開発ノートなど、学習に役立つ情報を発信しています。",
 }
 
+/** Vercel 本番でも環境変数を毎リクエストで反映（静的化による取り違え防止） */
+export const dynamic = "force-dynamic"
+
 function formatDate(dateString: string) {
   const date = new Date(dateString)
   return date.toLocaleDateString("ja-JP", {
@@ -97,11 +100,21 @@ export default async function ColumnsPage({ searchParams }: PageProps) {
           </div>
 
           {!isMicroCMSConfigured() ? (
-            <p className="mt-6 max-w-2xl mx-auto rounded-lg border border-dashed bg-muted/50 px-4 py-3 text-center text-sm text-muted-foreground">
-              microCMS 連携のため、<code className="rounded bg-muted px-1">MICROCMS_SERVICE_DOMAIN</code>{" "}
-              と <code className="rounded bg-muted px-1">MICROCMS_API_KEY</code> を{" "}
-              <code className="rounded bg-muted px-1">.env.local</code> に設定してください（
-              <code className="rounded bg-muted px-1">.env.example</code> 参照）。
+            <p className="mt-6 max-w-2xl mx-auto rounded-lg border border-dashed bg-muted/50 px-4 py-3 text-left text-sm text-muted-foreground sm:text-center">
+              microCMS 連携には{" "}
+              <code className="rounded bg-muted px-1">MICROCMS_SERVICE_DOMAIN</code> と{" "}
+              <code className="rounded bg-muted px-1">MICROCMS_API_KEY</code>{" "}
+              が必要です。
+              <span className="mt-2 block">
+                <strong className="text-foreground">ローカル開発:</strong>{" "}
+                <code className="rounded bg-muted px-1">.env.local</code> に記載（
+                <code className="rounded bg-muted px-1">.env.example</code> 参照）。
+              </span>
+              <span className="mt-2 block">
+                <strong className="text-foreground">本番（Vercel）:</strong>{" "}
+                Dashboard → プロジェクト → Settings → Environment Variables
+                に同じ名前で追加し、Save 後に Redeploy してください。
+              </span>
             </p>
           ) : null}
 
@@ -185,7 +198,11 @@ export default async function ColumnsPage({ searchParams }: PageProps) {
                 <Card>
                   <CardContent className="py-12 text-center text-muted-foreground">
                     {!isMicroCMSConfigured() ? (
-                      "記事を表示するには microCMS の環境変数を設定してください。"
+                      <>
+                        記事を表示するには microCMS の環境変数（
+                        <code className="rounded bg-muted px-1 text-xs">MICROCMS_SERVICE_DOMAIN</code>
+                        等）を設定してください。本番では Vercel の Environment Variables に追加します。
+                      </>
                     ) : q ? (
                       <>
                         「{q}」に一致する記事はありませんでした。

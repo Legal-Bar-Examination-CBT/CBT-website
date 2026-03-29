@@ -47,11 +47,13 @@ type BlogListResponse = {
 }
 
 function getServiceDomain(): string | undefined {
-  return process.env.MICROCMS_SERVICE_DOMAIN
+  const v = process.env.MICROCMS_SERVICE_DOMAIN?.trim()
+  return v || undefined
 }
 
 function getApiKey(): string | undefined {
-  return process.env.MICROCMS_API_KEY
+  const v = process.env.MICROCMS_API_KEY?.trim()
+  return v || undefined
 }
 
 /** microCMS の API 設定の URL 末尾（例: blogs, blog） */
