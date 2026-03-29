@@ -19,7 +19,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export const metadata: Metadata = {
   title: "機能紹介",
-  description: "司法試験CBTの論文式演習、短答式演習、AI分析機能を詳しくご紹介します。",
+  description: "司法試験CBT問題演習ビューワーの論文式演習、短答式演習、AI分析機能を詳しくご紹介します。",
 }
 
 const ronbunFeatures = [
@@ -162,7 +162,7 @@ export default function FeaturesPage() {
                   <div className="flex gap-1.5">
                     <div className="h-3 w-3 rounded-full bg-red-400" />
                     <div className="h-3 w-3 rounded-full bg-yellow-400" />
-                    <div className="h-3 w-3 rounded-full bg-green-400" />
+                    <div className="h-3 w-3 rounded-full bg-primary/70" />
                   </div>
                   <div className="flex-1 flex justify-center">
                     <span className="text-xs text-muted-foreground">論文式演習エディタ</span>
@@ -256,7 +256,7 @@ export default function FeaturesPage() {
                   <div className="flex gap-1.5">
                     <div className="h-3 w-3 rounded-full bg-red-400" />
                     <div className="h-3 w-3 rounded-full bg-yellow-400" />
-                    <div className="h-3 w-3 rounded-full bg-green-400" />
+                    <div className="h-3 w-3 rounded-full bg-primary/70" />
                   </div>
                   <div className="flex-1 flex justify-center">
                     <span className="text-xs text-muted-foreground">短答式演習</span>
@@ -354,7 +354,7 @@ export default function FeaturesPage() {
                   <div className="flex gap-1.5">
                     <div className="h-3 w-3 rounded-full bg-red-400" />
                     <div className="h-3 w-3 rounded-full bg-yellow-400" />
-                    <div className="h-3 w-3 rounded-full bg-green-400" />
+                    <div className="h-3 w-3 rounded-full bg-primary/70" />
                   </div>
                   <div className="flex-1 flex justify-center">
                     <span className="text-xs text-muted-foreground">AI学習分析ダッシュボード</span>

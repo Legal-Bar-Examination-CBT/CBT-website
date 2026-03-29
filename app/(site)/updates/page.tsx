@@ -4,7 +4,7 @@ import { Sparkles, Bug, Zap, Shield, Rocket } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "アップデート情報",
-  description: "司法試験CBTの最新機能追加、改善、バグ修正などの更新情報をお知らせします。",
+  description: "司法試験CBT問題演習ビューワーの最新機能追加、改善、バグ修正などの更新情報をお知らせします。",
 }
 
 const updateTypes = {
@@ -112,7 +112,7 @@ export default function UpdatesPage() {
               <span className="text-primary">アップデート</span>情報
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
-              司法試験CBTは常に進化しています。
+              司法試験CBT問題演習ビューワーは常に進化しています。
               新機能、改善、バグ修正などの更新情報をお知らせします。
             </p>
           </div>
