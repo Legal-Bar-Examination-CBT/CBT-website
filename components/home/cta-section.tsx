@@ -38,7 +38,7 @@ export function CTASection() {
 
         {/* Description */}
         <p className="mt-6 text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
-          クレジットカード不要、登録は1分で完了。
+          登録は1分で完了。
           14日間の無料トライアルで、操作性と学習体験をご確認ください。
         </p>
 
@@ -54,11 +54,11 @@ export function CTASection() {
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>
-          <Button 
-            size="lg" 
-            variant="outline" 
-            asChild 
-            className="border-white/30 text-white hover:bg-white/10 h-12 px-8 text-base"
+          <Button
+            size="lg"
+            variant="outline"
+            asChild
+            className="h-12 px-8 text-base border-white/40 bg-transparent text-white shadow-none hover:bg-white/15 hover:text-white"
           >
             <Link href="/pricing">
               料金プランを比較
@@ -72,7 +72,7 @@ export function CTASection() {
             <svg className="h-5 w-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
-            <span>クレジットカード不要</span>
+            <span>簡単お申し込み</span>
           </div>
           <div className="flex items-center gap-2">
             <svg className="h-5 w-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
