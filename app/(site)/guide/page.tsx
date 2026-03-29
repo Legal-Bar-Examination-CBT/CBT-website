@@ -20,8 +20,8 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "使い方ガイド | 司法試験CBT",
-  description: "司法試験CBTの始め方をステップバイステップでご案内します。アカウント登録から学習開始まで、わかりやすく解説。",
+  title: "使い方ガイド | 司法試験CBT問題演習ビューワー",
+  description: "司法試験CBT問題演習ビューワーの始め方をステップバイステップでご案内します。アカウント登録から学習開始まで、わかりやすく解説。",
 }
 
 const accountSteps = [
