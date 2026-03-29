@@ -11,8 +11,8 @@ import {
 import { ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "よくある質問 | 司法試験CBT",
-  description: "司法試験CBTに関するよくある質問をまとめました。サービスの利用方法、料金、機能についてお答えします。",
+  title: "よくある質問 | 司法試験CBT問題演習ビューワー",
+  description: "司法試験CBT問題演習ビューワーに関するよくある質問をまとめました。サービスの利用方法、料金、機能についてお答えします。",
 }
 
 const faqCategories = [
@@ -26,7 +26,7 @@ const faqCategories = [
       },
       {
         question: "無料トライアルはありますか？",
-        answer: "はい、14日間の無料トライアルをご用意しております。クレジットカード登録不要で、すぐに体験を開始できます。",
+        answer: "はい、14日間の無料トライアルをご用意しております。お申し込み後、すぐに体験を開始できます。",
       },
       {
         question: "退会するにはどうすればいいですか？",
@@ -162,7 +162,7 @@ export default function FAQPage() {
           </h2>
           <p className="mt-4 text-muted-foreground">
             お問い合わせフォームから、お気軽にご質問ください。
-            司法試験CBTに関するお問い合わせは、以下のフォームよりお願いいたします。
+            司法試験CBT問題演習ビューワーに関するお問い合わせは、以下のフォームよりお願いいたします。
           </p>
           <Button size="lg" asChild className="mt-6 bg-primary hover:bg-primary/90">
             <Link href="/contact">
