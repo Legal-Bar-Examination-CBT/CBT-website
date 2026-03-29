@@ -77,7 +77,7 @@ export function ComparisonSection() {
                 <th className="text-left py-4 px-6 font-medium text-muted-foreground">機能</th>
                 <th className="text-center py-4 px-6 font-bold text-primary bg-primary/5">
                   <div className="flex flex-col items-center">
-                    <span>司法試験CBT</span>
+                    <span>司法試験CBT問題演習ビューワー</span>
                     <Badge variant="secondary" className="mt-1 bg-gold/20 text-gold text-xs">おすすめ</Badge>
                   </div>
                 </th>

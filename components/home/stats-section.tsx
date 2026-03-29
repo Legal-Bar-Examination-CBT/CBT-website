@@ -120,7 +120,7 @@ export function StatsSection() {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
           <h2 className="text-3xl font-bold text-foreground sm:text-4xl text-balance">
-            数字で見る<span className="text-primary">司法試験CBT</span>
+            数字で見る<span className="text-primary">司法試験CBT問題演習ビューワー</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             多くの受験生に選ばれ、学習を支援し続けています。

@@ -60,7 +60,7 @@ export function LawyerSection() {
                 
                 <div className="mt-8 pt-6 border-t border-white/20">
                   <p className="text-sm text-white/60">
-                    司法試験CBTに関するお問い合わせは、サイト内のフォームよりお願いいたします。
+                    司法試験CBT問題演習ビューワーに関するお問い合わせは、サイト内のフォームよりお願いいたします。
                   </p>
                 </div>
               </CardContent>
