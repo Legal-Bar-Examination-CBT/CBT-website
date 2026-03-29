@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "料金プラン | 司法試験CBT",
+  title: "料金プラン | 司法試験CBT問題演習ビューワー",
   description: "司法試験CBT問題演習ビューワーの料金プラン。月額2,200円で論文式・短答式が使い放題。14日間無料トライアル付き。",
 }
 
@@ -64,7 +64,7 @@ const features = [
 const faqs = [
   {
     question: "14日間の無料トライアル後は自動で課金されますか？",
-    answer: "クレジットカード登録は任意です。トライアル期間中にカード登録をしなければ、自動で課金されることはありません。",
+    answer: "無料トライアル終了後もサービスをご利用になる場合は、月額料金が発生します。解約の手続きや課金のタイミングについては、マイページまたはお申し込み時のご案内をご確認ください。",
   },
   {
     question: "プランの変更はいつでもできますか？",
@@ -148,7 +148,7 @@ export default function PricingPage() {
                 </Link>
               </Button>
               <p className="text-sm text-muted-foreground text-center">
-                クレジットカード登録不要・すぐに体験開始
+                お申し込み後、すぐに体験を開始できます
               </p>
             </CardFooter>
           </Card>
@@ -167,7 +167,7 @@ export default function PricingPage() {
                   <th className="text-left py-4 px-6 font-medium text-muted-foreground">機能</th>
                   <th className="text-center py-4 px-6 font-bold text-primary bg-primary/5">
                     <div className="flex flex-col items-center">
-                      <span>司法試験CBT</span>
+                      <span>司法試験CBT問題演習ビューワー</span>
                       <Badge variant="secondary" className="mt-1 bg-gold/20 text-gold text-xs">おすすめ</Badge>
                     </div>
                   </th>
