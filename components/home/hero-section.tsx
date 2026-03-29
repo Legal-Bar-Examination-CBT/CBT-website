@@ -66,9 +66,14 @@ export function HeroSection() {
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="h-12 px-8 text-base group border-white/30 text-white hover:bg-white/10">
+              <Button
+                size="lg"
+                variant="outline"
+                asChild
+                className="h-12 px-8 text-base group border-white/40 bg-transparent text-white shadow-none hover:bg-white/15 hover:text-white"
+              >
                 <Link href="/pricing">
-                  <Play className="mr-2 h-4 w-4 fill-white text-white group-hover:scale-110 transition-transform" />
+                  <Play className="mr-2 h-4 w-4 fill-current text-current group-hover:scale-110 transition-transform" />
                   金額を比較する
                 </Link>
               </Button>
@@ -77,15 +82,15 @@ export function HeroSection() {
             {/* Trust Indicators */}
             <div className="mt-10 flex flex-wrap items-center gap-6 text-sm text-white/70">
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-5 w-5 text-accent" />
-                <span>クレジットカード不要</span>
+                <CheckCircle2 className="h-5 w-5 text-gold" />
+                <span>いつでも解約可能</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-5 w-5 text-accent" />
+                <CheckCircle2 className="h-5 w-5 text-gold" />
                 <span>弁護士監修</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-5 w-5 text-accent" />
+                <CheckCircle2 className="h-5 w-5 text-gold" />
                 <span>Mac/Windows対応</span>
               </div>
             </div>
@@ -101,7 +106,7 @@ export function HeroSection() {
                   <div className="flex gap-1.5">
                     <div className="h-3 w-3 rounded-full bg-red-400" />
                     <div className="h-3 w-3 rounded-full bg-yellow-400" />
-                    <div className="h-3 w-3 rounded-full bg-green-400" />
+                    <div className="h-3 w-3 rounded-full bg-primary/70" />
                   </div>
                   <div className="flex-1 flex justify-center">
                     <div className="bg-background rounded-md px-4 py-1 text-xs text-muted-foreground">
@@ -144,7 +149,7 @@ export function HeroSection() {
                   {/* Status Bar */}
                   <div className="flex items-center justify-between text-xs text-muted-foreground pt-2 border-t">
                     <span>文字数: 0 / 4,000</span>
-                    <span className="text-accent font-medium">本番同様の環境</span>
+                    <span className="text-primary font-medium">本番同様の環境</span>
                   </div>
                 </div>
               </div>
