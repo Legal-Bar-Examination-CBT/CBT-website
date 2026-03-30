@@ -1,8 +1,9 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Play, MonitorPlay, CheckCircle2 } from "lucide-react"
+import { ArrowRight, Play, CheckCircle2 } from "lucide-react"
 
 export function HeroSection() {
   return (
@@ -101,69 +102,16 @@ export function HeroSection() {
             <div className="relative">
               {/* Main Preview Card */}
               <div className="rounded-2xl bg-card shadow-2xl border overflow-hidden">
-                {/* Browser Header */}
-                <div className="flex items-center gap-2 bg-muted/50 px-4 py-3 border-b">
-                  <div className="flex gap-1.5">
-                    <div className="h-3 w-3 rounded-full bg-red-400" />
-                    <div className="h-3 w-3 rounded-full bg-yellow-400" />
-                    <div className="h-3 w-3 rounded-full bg-primary/70" />
-                  </div>
-                  <div className="flex-1 flex justify-center">
-                    <div className="bg-background rounded-md px-4 py-1 text-xs text-muted-foreground">
-                      shihou-cbt.com/practice
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Editor Preview */}
-                <div className="p-6 space-y-4">
-                  {/* Question Header */}
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
-                      令和7年 司法試験 憲法
-                    </span>
-                    <span className="text-xs text-muted-foreground">制限時間: 02:00:00</span>
-                  </div>
-                  
-                  {/* Question Text Preview */}
-                  <div className="space-y-2">
-                    <p className="text-sm text-foreground leading-relaxed">
-                      【設問】
-                      憲法第21条の「表現の自由」について、以下の観点から論じなさい。
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      1. 表現の自由の憲法上の位置づけ
-                      <br />
-                      2. 表現の自由に対する制約の許容性
-                    </p>
-                  </div>
-                  
-                  {/* Editor Area */}
-                  <div className="bg-muted/30 rounded-lg p-4 min-h-[120px] border border-dashed border-border">
-                    <p className="text-sm text-muted-foreground">
-                      ここに答案を入力...
-                    </p>
-                    <div className="mt-2 h-px w-16 bg-primary animate-pulse" />
-                  </div>
-                  
-                  {/* Status Bar */}
-                  <div className="flex items-center justify-between text-xs text-muted-foreground pt-2 border-t">
-                    <span>文字数: 0 / 4,000</span>
-                    <span className="text-primary font-medium">本番同様の環境</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating Stats Card */}
-              <div className="absolute -left-4 -bottom-4 lg:-left-8 lg:-bottom-8 rounded-xl bg-card shadow-xl border p-4 max-w-[200px]">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold/10">
-                    <MonitorPlay className="h-5 w-5 text-gold" />
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold text-foreground">¥2,200</p>
-                    <p className="text-xs text-muted-foreground">月額/業界最安値</p>
-                  </div>
+                <div className="relative aspect-[1298/683] w-full bg-white p-3">
+                  <Image
+                    src="/lp-import/lp-014-file.png?v=2"
+                    alt="CBT演習画面プレビュー"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 1024px) 100vw, 640px"
+                    unoptimized
+                    priority
+                  />
                 </div>
               </div>
             </div>

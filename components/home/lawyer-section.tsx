@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Scale, MapPin, Clock } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 
@@ -20,6 +21,18 @@ export function LawyerSection() {
             <p className="text-white/80 mb-2">
               東京弁護士会所属 登録番号（63952）
             </p>
+
+            <div className="mt-6 mb-6">
+              <div className="relative h-48 w-48 overflow-hidden rounded-2xl border border-white/20 shadow-xl sm:h-56 sm:w-56">
+                <Image
+                  src="/lp-import/kansensei.png"
+                  alt="監修：弁護士 関智之"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 192px, 224px"
+                />
+              </div>
+            </div>
             
             <blockquote className="text-lg text-white/90 leading-relaxed border-l-4 border-gold pl-4 my-8">
               「司法試験で1点に泣いた経験から、本番同様の学習環境を作りました。」
@@ -33,6 +46,17 @@ export function LawyerSection() {
 
           {/* Right Content - Law Firm Info */}
           <div>
+            <div className="mb-5 overflow-hidden rounded-2xl border border-white/20 shadow-xl">
+              <div className="relative h-40 w-full sm:h-44">
+                <Image
+                  src="/lp-import/nakanodori.jpg"
+                  alt="中野通りの風景"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 560px"
+                />
+              </div>
+            </div>
             <Card className="bg-white/10 border-white/20 text-white backdrop-blur-sm">
               <CardContent className="p-8">
                 <h3 className="text-xl font-bold mb-2">所属弁護士事務所</h3>

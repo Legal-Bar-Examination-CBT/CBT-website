@@ -1,19 +1,19 @@
-import { AlertCircle, DollarSign, HelpCircle } from "lucide-react"
+import Image from "next/image"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 const problems = [
   {
-    icon: AlertCircle,
+    imageSrc: "/lp-import/problem-cbt.png",
     title: "CBTに慣れる機会がない",
     description: "本番同様の環境で練習できる場所がなく、形式に戸惑う受験生が多数。操作や画面サイズへの慣れが必須になると考えられているこの「CBT」で演習機会を確保する機会がないのが問題になっています。",
   },
   {
-    icon: DollarSign,
+    imageSrc: "/lp-import/problem-cost.png",
     title: "予備校の費用が高すぎる",
     description: "受験費用を抑えたい！予備校の模試や講座があるがそれだけのために予備校に行くのは、時間もお金ももったいない！",
   },
   {
-    icon: HelpCircle,
+    imageSrc: "/lp-import/problem-anxiety.png",
     title: "初めてのCBTに不安がある",
     description: "紙試験とは操作も雰囲気も違う。CBT独自の形式もあるため、「慣れ」が不足すると、実力を出し切れないことも。",
   },
@@ -44,8 +44,14 @@ export function ProblemSection() {
               className="bg-card border-border hover:border-primary/30 transition-colors"
             >
               <CardHeader>
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-destructive/10 text-destructive mb-4">
-                  <problem.icon className="h-6 w-6" />
+                <div className="relative mb-4 h-16 w-16 overflow-hidden rounded-xl bg-destructive/10 p-1.5">
+                  <Image
+                    src={problem.imageSrc}
+                    alt=""
+                    fill
+                    className="object-contain"
+                    sizes="64px"
+                  />
                 </div>
                 <CardTitle className="text-xl">{problem.title}</CardTitle>
               </CardHeader>

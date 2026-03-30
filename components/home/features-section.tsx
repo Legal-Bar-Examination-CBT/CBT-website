@@ -1,23 +1,28 @@
-import { Code, Lightbulb, Sparkles, ArrowRight } from "lucide-react"
+import Image from "next/image"
+import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { cn } from "@/lib/utils"
 
 const features = [
   {
-    icon: Code,
+    imageSrc: "/lp-import/lp-020-original.png",
+    imageClassName: "scale-90",
     title: "自社で独自にシステム構築",
     description: "システム開発を独自で行い、受験生の欲しい機能だけを集約。論文および短答のCBTシステム、メモ機能など欲しい機能を搭載！AI機能などを随時追加します！",
     color: "primary",
   },
   {
-    icon: Lightbulb,
+    imageSrc: "/lp-import/lp-016-original.png",
+    imageClassName: "scale-95",
     title: "受験生の気持ちがわかるからこそこだわった設計",
     description: "製作者は元受験生。短答式試験、論文式試験に合格するために必要な機能を優先して揃えました。",
     color: "gold",
   },
   {
-    icon: Sparkles,
+    imageSrc: "/lp-import/lp-010-8445_color.png",
+    imageClassName: "scale-90",
     title: "購入前にじっくり試せるから安心",
     description: "14日間の無料トライアルで、操作性と学習体験を十分にご確認ください。",
     color: "accent",
@@ -57,8 +62,15 @@ export function FeaturesSection() {
                 className="group relative overflow-hidden border-2 transition-all duration-300 hover:shadow-xl"
               >
                 <CardHeader>
-                  <div className={`flex h-14 w-14 items-center justify-center rounded-xl ${colorClasses[feature.color as keyof typeof colorClasses]} transition-colors mb-4`}>
-                    <feature.icon className="h-7 w-7" />
+                  <div className={`flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl ${colorClasses[feature.color as keyof typeof colorClasses]} transition-colors mb-4`}>
+                    <Image
+                      src={feature.imageSrc}
+                      alt=""
+                      width={56}
+                      height={56}
+                      className={cn("h-14 w-14 object-contain", feature.imageClassName)}
+                      sizes="64px"
+                    />
                   </div>
                   <CardTitle className="text-xl">{feature.title}</CardTitle>
                 </CardHeader>

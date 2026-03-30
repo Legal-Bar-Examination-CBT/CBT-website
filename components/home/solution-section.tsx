@@ -1,23 +1,28 @@
-import { Monitor, Coins, CalendarDays, ArrowRight } from "lucide-react"
+import Image from "next/image"
+import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { cn } from "@/lib/utils"
 
 const solutions = [
   {
-    icon: Monitor,
+    imageSrc: "/lp-import/lp-015-original.png",
+    imageClassName: "scale-105",
     title: "本番さながらの環境で練習",
     description: "CBTの試験画面を忠実に再現。「慣れ」と「実戦感覚」を身につけられます。",
     color: "primary",
   },
   {
-    icon: Coins,
+    imageSrc: "/lp-import/lp-019-original.png",
+    imageClassName: "scale-95",
     title: "予備校より安くて本格的",
     description: "会場費や人件費をカットした独自システム。論文式と短答式込みで月額税込2,200円は最安値で使い放題！今ならトライアル14日間無料！",
     color: "gold",
   },
   {
-    icon: CalendarDays,
+    imageSrc: "/lp-import/lp-020-original.png",
+    imageClassName: "scale-90",
     title: "毎日の練習として使える",
     description: "反復学習に最適。本番同様の環境で好きなタイミングで演習可能。WindowsとMacの両方の環境を用意していますので普段のPCで練習ができます！",
     color: "accent",
@@ -60,8 +65,15 @@ export function SolutionSection() {
                 className={`group relative overflow-hidden border-2 transition-all duration-300 hover:shadow-xl hover:${borderClasses[solution.color as keyof typeof borderClasses]}`}
               >
                 <CardHeader>
-                  <div className={`flex h-14 w-14 items-center justify-center rounded-xl ${colorClasses[solution.color as keyof typeof colorClasses]} group-hover:text-white transition-colors mb-4`}>
-                    <solution.icon className="h-7 w-7" />
+                  <div className={`flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl ${colorClasses[solution.color as keyof typeof colorClasses]} transition-colors mb-4`}>
+                    <Image
+                      src={solution.imageSrc}
+                      alt=""
+                      width={56}
+                      height={56}
+                      className={cn("h-14 w-14 object-contain", solution.imageClassName)}
+                      sizes="64px"
+                    />
                   </div>
                   <CardTitle className="text-xl">{solution.title}</CardTitle>
                 </CardHeader>
