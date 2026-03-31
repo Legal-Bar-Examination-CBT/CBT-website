@@ -66,10 +66,10 @@ export function CTASection() {
         {/* Trust badges */}
         <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/55">
           {[
-            "簡単お申し込み",
-            "いつでも解約可能",
+            "14日間無料トライアル",
+            "予備試験対応",
             "弁護士監修",
-            "クレジットカード不要",
+            "Mac/Windows対応",
           ].map((item) => (
             <div key={item} className="flex items-center gap-2">
               <BadgeCheck className="h-4 w-4 text-gold" />
